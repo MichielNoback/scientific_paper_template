@@ -11,13 +11,12 @@ abstract: |
   Geef hier je samenvatting in maximaal 150 woorden. Het is een samenvatting van het hele artikel; niet alleen de resultaten! Begin met het belang van dit onderzoek, dan hoe het onderzoek is aangepakt en de belangrijkste resultaten en eindig met de implicaties ervan voor de wetenschap/de maatschappij. Neem nooit figuren of tabellen op in de samenvatting.
 
 bibliography: simple_template.bib # naam van je .bib file. Deze moet hetzelfde zijn als je Rmd bestandsnaam
-#csl: Path to your .csl file #sets the style of your bibliography
 
 output:
   bookdown::pdf_document2:
-    keep_tex: false    #set this to true if you want to investigate the generated tex
-    toc: false         #table of contents
-    fig_caption: true  #includes figure captions with numbering in output
+    keep_tex: false    # set this to true if you want to investigate the generated tex
+    toc: false         # table of contents
+    fig_caption: true  # includes figure captions with numbering in output
     includes:  
         in_header: include_tex_header.tex #will include rules for linespacing and figure floating
 
@@ -37,10 +36,8 @@ Gebruik de [wordcount plugin](https://github.com/benmarwick/wordcountaddin) om h
 Aan het begin van je paper kan je een zogenaamde *setup chunk* toevoegen. Hierin kan je het gedrag van `knitr` configureren en de bibliotheken laden die je in je code gebruikt. Hieronder is een voorbeeld van zo'n *setup chunk*.
 
 ```{r setup, message=FALSE, warning=FALSE, include=FALSE}
-#knitr::opts_chunk$set(fig.pos = 'p') # Places figures on their own pages
 knitr::opts_chunk$set(out.width = '100%', dpi=300) # configuratie voor figuur grootte en resolutie
 knitr::opts_chunk$set(echo = FALSE) # Deze regel zorgt ervoor GEEN ENKELE chunk getoond wordt! 
-knitr::opts_chunk$set(fig.pos = "!H", out.extra = "")
 # Laad alle gebruikte bibliotheken hier
 library(ggplot2)
 ```
