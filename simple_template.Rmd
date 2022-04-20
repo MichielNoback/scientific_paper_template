@@ -15,9 +15,9 @@ bibliography: simple_template.bib # naam van je .bib file. Deze moet hetzelfde z
 
 output:
   bookdown::pdf_document2:
-    keep_tex: true
-    toc: false
-    fig_caption: true
+    keep_tex: false    #set this to true if you want to investigate the generated tex
+    toc: false         #table of contents
+    fig_caption: true  #includes figure captions with numbering in output
     includes:  
         in_header: include_tex_header.tex #will include rules for linespacing and figure floating
 
