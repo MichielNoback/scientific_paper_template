@@ -1,3 +1,0 @@
-\begin{figure}[!H]
-\includegraphics[width=1\linewidth,]{simple_template_files/figure-latex/plot-demo-1} \caption{Ozon concentraties geplot tegen zonlicht intensiteit, vergeleken over verschillende maanden. Lineaire modellen (blauwe lijnen) en confidence intervals (grijze gebieden) zijn hieraan toegevoegd.}\label{fig:plot-demo}
-\end{figure}
