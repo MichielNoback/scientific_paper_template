@@ -15,14 +15,12 @@ bibliography: simple_template.bib # naam van je .bib file. Deze moet hetzelfde z
 
 output:
   bookdown::pdf_document2:
+    keep_tex: true
     toc: false
-    fig_caption: yes
-    always_allow_html: yes
+    fig_caption: true
+    includes:  
+        in_header: include_tex_header.tex #will include rules for linespacing and figure floating
 
-# These are LaTex settings to take care of floating figures/tables, line spacing, etc
-header-includes:
-  - \usepackage{endfloat}    
-  - \usepackage{setspace}\doublespacing
 ---
 
 # Introductie op deze template
@@ -42,7 +40,7 @@ Aan het begin van je paper kan je een zogenaamde *setup chunk* toevoegen. Hierin
 #knitr::opts_chunk$set(fig.pos = 'p') # Places figures on their own pages
 knitr::opts_chunk$set(out.width = '100%', dpi=300) # configuratie voor figuur grootte en resolutie
 knitr::opts_chunk$set(echo = FALSE) # Deze regel zorgt ervoor GEEN ENKELE chunk getoond wordt! 
-
+knitr::opts_chunk$set(fig.pos = "!H", out.extra = "")
 # Laad alle gebruikte bibliotheken hier
 library(ggplot2)
 ```
@@ -108,7 +106,7 @@ Gebruik zo veel mogelijk figuren om je informatie uit je resultaten over te bren
 
 Voorzie je figuren van een nummer en een beschrijvende titel. Zorg voor correcte as-labels (eenheid en grootheid), legenda en bijschrift. Hier is een voorbeeldje.
 
-```{r plot-demo, fig.caption="Ozon concentraties geplot tegen zonlicht intensiteit, vergeleken over verschillende maanden. Lineaire modellen (blauwe lijnen) en confidence intervals (grijze gebieden) zijn hieraan toegevoegd.", warning=FALSE}
+```{r plot-demo, warning=FALSE, fig.cap='Ozon concentraties geplot tegen zonlicht intensiteit, vergeleken over verschillende maanden. Lineaire modellen (blauwe lijnen) en confidence intervals (grijze gebieden) zijn hieraan toegevoegd.'}
 airquality$Month_f = factor(airquality$Month, levels = 5:9, labels = month.abb[5:9])
 ggplot(data = airquality, mapping = aes(x = Solar.R, y = Ozone)) +
     geom_smooth(method = "lm", formula = y ~ x) +
@@ -118,6 +116,7 @@ ggplot(data = airquality, mapping = aes(x = Solar.R, y = Ozone)) +
     xlab("Solar radiation (lang)") +
     theme(legend.title = element_blank())
 ```
+
 
 
 
