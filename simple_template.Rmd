@@ -157,6 +157,8 @@ Ook de code zelf is waar nodig natuurlijk goed gedocumenteerd.
 Voeg aan het eind een woord-telling in:
 
 ```{r wordcount, message=FALSE}
+#install.packages(devtools)
+#devtools::install_github("benmarwick/wordcountaddin", type = "source", dependencies = TRUE)
 wordcountaddin:::text_stats()
 ```
 
