@@ -50,7 +50,7 @@ In principe laat je code nooit zien in een publicatie, behalve als de code expli
 
 ## Referenties / citeren {#refs}
 
-Voor alle secties geldt dat je referenties kan gebruiken naar andere publicaties (externe referenties ofwel citatie) of naar secties, tabellen of figuren in je eigen publicatie (interne referenties). Voor externe referenties gebruik je deze notatie: `[@<ref_key]`, bijvoorbeeld `[@xie2013ddrk]`. Hier gebruik ik hem echt: [@xie2013ddrk]. De *processing engine* zal in het bibliografie bestand zoals opgegeven in de ***yaml header*** van dit bestand (`simple_template.bib`) zoeken naar de referentie met deze naam en vervolgens de hele referentie onderaan in het document opnemen. Kijk vooral in het `.bin` document hoe je deze kan gebruiken.
+Voor alle secties geldt dat je referenties kan gebruiken naar andere publicaties (externe referenties ofwel citatie) of naar secties, tabellen of figuren in je eigen publicatie (interne referenties). Voor externe referenties gebruik je deze notatie: `[@<ref_key]`, bijvoorbeeld `[@xie2013ddrk]`. Hier gebruik ik hem echt: [@xie2013ddrk]. De *processing engine* zal in het bibliografie bestand zoals opgegeven in de ***yaml header*** van dit bestand (`simple_template.bib`) zoeken naar de referentie met deze naam en vervolgens de hele referentie onderaan in het document opnemen. Kijk vooral in het `.bin` document hoe je deze kan gebruiken. Er zijn voor verschillende soorten bronnen verschillende @annotaties; zie in de `.bib` voor enkele voorbeelden.
 
 Interne referenties naar tabellen, figuren, equations en secties kan je maken door deze syntax te gebruiken: `\@ref(fig:<figuur-naam>)` waarbij `<figuur-naam>` de naam is van het chunk waarin de figuur gemaakt wordt. Hetzelfde werkt voor tabellen: `\@ref(tab:<tabel-naam>)`. Een sectie kan je labelen door er `{#label-naam}` achter te zetten. Bijvoorbeeld, dit `\@ref(setup-chunk)` linkt terug naar de sectie over de setup chunk in sectie [\@ref(setup-chunk)].
 
@@ -149,6 +149,8 @@ Vaak zijn online bijlagen vele malen groter dan het eigenlijke artikel. Wees noo
 Natuurlijk is een git(hub) repo daar de beste plek voor!
 Zorg ervoor de je repo logisch is ingericht met goede Readme document(en). 
 Ook de code zelf is waar nodig natuurlijk goed gedocumenteerd.
+
+
 
 ## Wordcount
 
