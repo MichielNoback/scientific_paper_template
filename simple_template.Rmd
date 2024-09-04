@@ -1,5 +1,5 @@
 ---
-title: My Awesome Catchy Title! # Geef je paper een naam die prikkelt, informatief is, en zo kort mogelijk
+title: My Awesome Catchy Title! # Geef je paper een naam die prikkelt, informatief is, en zo kort mogelijk is
 
 author: |
   | Michiel Noback $^1$, Fenna Feenstra $^1$, John Doe $^2$
@@ -8,7 +8,10 @@ author: |
 lang: nl # dit zorgt er voor dat "abstract" "samenvatting" gaat heten
 
 abstract: |
-  Geef hier je samenvatting in maximaal 150 woorden. Het is een samenvatting van het hele artikel; niet alleen de resultaten! Begin met het belang van dit onderzoek, dan hoe het onderzoek is aangepakt en de belangrijkste resultaten en eindig met de implicaties ervan voor de wetenschap/de maatschappij. Neem nooit figuren of tabellen op in de samenvatting.
+  Geef hier je samenvatting in maximaal 150 woorden. Het is een samenvatting van het hele artikel; 
+  niet alleen de resultaten! Begin met het belang van dit onderzoek, dan hoe het onderzoek is aangepakt 
+  en de belangrijkste resultaten en eindig met de implicaties ervan voor de wetenschap/de maatschappij. 
+  Neem nooit figuren of tabellen op in de samenvatting.
 
 bibliography: simple_template.bib # naam van je .bib file. Deze moet hetzelfde zijn als je Rmd bestandsnaam
 
