@@ -103,7 +103,7 @@ Gebruik zo veel mogelijk figuren om je informatie uit je resultaten over te bren
 
 Voorzie je figuren van een nummer en een beschrijvende titel. Zorg voor correcte as-labels (eenheid en grootheid), legenda en bijschrift. Hier is een voorbeeldje.
 
-```{r plot-demo, warning=FALSE, fig.cap='Ozon concentraties geplot tegen zonlicht intensiteit, vergeleken over verschillende maanden. Lineaire modellen (blauwe lijnen) en confidence intervals (grijze gebieden) zijn hieraan toegevoegd.'}
+```{r plot-demo, warning=FALSE, fig.cap='Ozon concentraties geplot tegen zonlicht intensiteit, vergeleken over verschillende maanden. Ozon concentratie is in parts per billion (ppb). Lineaire modellen (blauwe lijnen) en confidence intervals (grijze gebieden) zijn hieraan toegevoegd.'}
 airquality$Month_f = factor(airquality$Month, levels = 5:9, labels = month.abb[5:9])
 ggplot(data = airquality, mapping = aes(x = Solar.R, y = Ozone)) +
     geom_smooth(method = "lm", formula = y ~ x) +
